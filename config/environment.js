@@ -2,11 +2,12 @@
 
 module.exports = function (environment) {
   'use strict';
-  const ENV = {
-    modulePrefix: 'ga-wdi-boston.ember-auth',
+  var ENV = {
+    modulePrefix: 'threesixty-review',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    apiHost: 'http://localhost:3000/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -49,7 +50,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.rootURL = '/ThreeSixty-Review';
     ENV.locationType = 'hash';
+    ENV.apiHost = 'https://threesixty-review-api.herokuapp.com/'
   }
 
   return ENV;
