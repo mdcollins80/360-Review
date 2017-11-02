@@ -46,5 +46,6 @@
     placeholder='Management'
     value=review.mgmt
   }}
-  <button type='submit'>Save</button>
+  <button class='btn btn-primary' type='submit'>Save</button>
+  <button class='btn btn-danger' {{action 'deleteReview' review}}>Delete</button>
 </form>
