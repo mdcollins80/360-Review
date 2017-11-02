@@ -19,6 +19,10 @@ export default Ember.Route.extend({
           update.set('mgmt', review.mgmt);
           update.save();
         });
+    },
+    deleteReview (review) {
+      review.destroyRecord()
+        .then(() => this.transitionTo('reviews'));
     }
   }
 });

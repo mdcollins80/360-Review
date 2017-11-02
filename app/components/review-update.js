@@ -17,6 +17,9 @@ export default Ember.Component.extend({
         mgmt: this.get('review.mgmt')
       }
       this.sendAction('updateReview', review)
+    },
+    deleteReview (review) {
+      this.sendAction('deleteReview', review);
     }
   }
 });
