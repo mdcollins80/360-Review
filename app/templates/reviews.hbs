@@ -2,6 +2,6 @@
 
 <ul>
   {{#each model as |review|}}
-    <li>{{review.revieweeGivenName}}</li>
+    <li>{{#link-to "review" review}}{{review.revieweeGivenName}}{{/link-to}}</li>
   {{/each}}
 </ul>

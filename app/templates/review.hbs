@@ -1,1 +1,21 @@
-<h6>single review route!!</h6>
+<h4>360 Review Form</h4>
+
+<em>Employee:</em>  {{model.revieweeGivenName}} {{model.revieweeSurname}}<br>
+<em>Business Unit:</em>  {{model.revieweeBusinessUnit}}<br>
+
+{{!-- Use an outlet to connect to three components, one for each section
+      of the review process. --}}
+
+{{!-- <form {{action 'updateReview' on='submit' review=model }}>
+  {{input
+    placeholder='Quality of Work Product'
+    value=this.qowp
+  }}
+  {{input
+    placeholder='Problem Solving'
+    value=this.prob}}
+  {{input
+    placeholder='Implementation Effectiveness'
+    value=this.imef}}
+  <button type='submit'>Save</button>
+</form> --}}
