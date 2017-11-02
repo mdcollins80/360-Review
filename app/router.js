@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('reviews');
+  this.route('review', { path: '/reviews/:review_id' });
 });
 
 export default Router;
