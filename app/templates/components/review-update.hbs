@@ -1,1 +1,50 @@
-<p>review update component!</p>
+<br>
+
+<form {{action 'updateReview' on='submit' review=review }}>
+  Quality of Work Product: {{input
+    placeholder='Quality of Work Product'
+    value=review.qowp
+  }}
+
+  Problem Solving:
+  {{input
+    placeholder='Problem Solving'
+    value=review.prob
+  }}
+  Implementation Effectiveness:
+  {{input
+    placeholder='Implementation Effectiveness'
+    value=review.imef
+  }}
+  Openness to Feedback:
+  {{input
+    placeholder='Openness to Feedback'
+    value=review.opfb
+  }}
+  Teamwork:
+  {{input
+    placeholder='Teamwork'
+    value=review.team
+  }}
+  Communication:
+  {{input
+    placeholder='Communication'
+    value=review.comm
+  }}
+  Effort & Commitment:
+  {{input
+    placeholder='Effort & Commitment'
+    value=review.efco
+  }}
+  Reliability
+  {{input
+    placeholder='Reliability'
+    value=review.reli
+  }}
+  Management
+  {{input
+    placeholder='Management'
+    value=review.mgmt
+  }}
+  <button type='submit'>Save</button>
+</form>
