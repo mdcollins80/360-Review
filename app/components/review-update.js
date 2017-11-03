@@ -15,8 +15,8 @@ export default Ember.Component.extend({
         efco: this.get('review.efco'),
         reli: this.get('review.reli'),
         mgmt: this.get('review.mgmt')
-      }
-      this.sendAction('updateReview', review)
+      };
+      this.sendAction('updateReview', review);
     },
     deleteReview (review) {
       this.sendAction('deleteReview', review);

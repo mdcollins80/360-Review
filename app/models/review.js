@@ -15,5 +15,6 @@ export default DS.Model.extend({
   mgmt: DS.attr('number'),
   strengths: DS.attr('string'),
   improves: DS.attr('string'),
-  openresp: DS.attr('string')
+  openresp: DS.attr('string'),
+  wasSaved: DS.attr('boolean')
 });

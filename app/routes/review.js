@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
   actions: {
     updateReview (review) {
-      let updatedReview = this.get('store').findRecord('review', review.id)
+      this.get('store').findRecord('review', review.id)
         .then(function (update) {
           update.set('qowp', review.qowp);
           update.set('prob', review.prob);
@@ -17,8 +17,10 @@ export default Ember.Route.extend({
           update.set('efco', review.efco);
           update.set('reli', review.reli);
           update.set('mgmt', review.mgmt);
-          update.save();
-        });
+          update.set('wasSaved', true);
+          update.save()
+        })
+        .then(() => this.transitionTo('reviews'));
     },
     deleteReview (review) {
       review.destroyRecord()
