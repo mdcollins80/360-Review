@@ -5,6 +5,6 @@
 <h3>Edit Users</h3>
 <ul>
 {{#each model as |user|}}
-  <li>{{user.email}}</li>
+  <li>{{#link-to 'user' user}}{{user.email}}{{/link-to}}</li>
 {{/each}}
 </ul>
