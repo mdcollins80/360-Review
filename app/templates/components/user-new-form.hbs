@@ -1,0 +1,39 @@
+
+<label for="email">Email</label>
+{{input type="email"
+        id="email"
+        placeholder="Email"
+        value=credentials.email}}
+<label for="kind">Password</label>
+{{input type="password"
+        id="password"
+        placeholder="Password"
+        value=credentials.password}}
+<label for="password-confirmation">Password Confirmation</label>
+{{input type="password"
+        id="password-confirmation"
+        placeholder="Password Confirmation"
+        value=credentials.passwordConfirmation}}
+<label>First Name</label>
+{{input type="string"
+        id=given-name
+        placeholder="Given Name"
+        value=credentials.givenName}}
+<label>Last Name</label>
+{{input type="string"
+        id=surname
+        placeholder="Last Name"
+        value=credentials.surname}}
+<label>Business Unit</label>
+{{input type="string"
+        id=business-unit
+        placeholder="Business Unit"
+        value=credentials.businessUnit}}
+
+<button type="submit" class="btn btn-success" {{action "submit"}}>
+  Create User
+</button>
+
+<button class="btn btn-default" {{action "reset"}}>
+  Cancel
+</button>
