@@ -1,0 +1,36 @@
+<form {{ action 'updateUser' on='submit' user=user }}>
+  <label for="email">Email</label>
+    {{input type="email"
+    id="email"
+    placeholder="Email"
+    value=user.email}}
+  <label for="kind">Password</label>
+    {{input type="password"
+    id="password"
+    placeholder="Password"
+    value=user.password}}
+  <label for="password-confirmation">Password Confirmation</label>
+    {{input type="password"
+    id="password-confirmation"
+    placeholder="Password Confirmation"
+    value=user.passwordConfirmation}}
+  <label>First Name</label>
+    {{input type="string"
+    id=given-name
+    placeholder="Given Name"
+    value=user.givenName}}
+  <label>Last Name</label>
+    {{input type="string"
+    id=surname
+    placeholder="Last Name"
+    value=user.surname}}
+  <label>Business Unit</label>
+    {{input type="string"
+    id=business-unit
+    placeholder="Business Unit"
+    value=user.businessUnit}}
+  <br>
+    <button type="submit" class="btn btn-success">Save</button>
+    <button class="btn btn-default" {{action "reset"}}>Cancel</button>
+    <button class="btn btn-danger pull-right" {{action 'deleteUser' user}}>Delete</button>
+</form>
