@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  flashMessages: Ember.inject.service(),
+
   actions: {
     updateUser () {
       const user = {
@@ -13,10 +15,9 @@ export default Ember.Component.extend({
         businessUnit: this.get('user.businessUnit')
       };
       if (this.get('user.password') !== this.get('user.passwordConfirmation')) {
-        console.log('passwords do not match')
+        this.get('flashMessages').danger('Passwords don\'t match.  Please try again.')
       } else {
-        console.log('passwords DO match')
-      this.sendAction('updateUser', user);
+        this.sendAction('updateUser', user);
       }
     }
   }
