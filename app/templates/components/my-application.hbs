@@ -26,6 +26,14 @@
 
 <h1>Match Education 360 Review</h1>
 
+{{#if isAdmin}}
+  <p>Welcome to the 360 Review Admin Portal.  From here you can create new users
+  via the User menu, and view your scheduled Reviews.</p>
+  {{else}}
+  <p>Welcome to the 360 Review Process.  Please click on Reviews to view your
+    assigned and completed reviews!</p>
+{{/if}}
+
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
 {{/each}}
