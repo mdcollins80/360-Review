@@ -17,6 +17,9 @@ export default Ember.Route.extend({
           update.set('efco', review.efco);
           update.set('reli', review.reli);
           update.set('mgmt', review.mgmt);
+          update.set('strengths', review.strenghts);
+          update.set('improves', review.improves);
+          update.set('openresp', review.openresp);
           update.set('wasSaved', true);
           update.save()
         })

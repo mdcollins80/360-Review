@@ -14,7 +14,10 @@ export default Ember.Component.extend({
         comm: this.get('review.comm'),
         efco: this.get('review.efco'),
         reli: this.get('review.reli'),
-        mgmt: this.get('review.mgmt')
+        mgmt: this.get('review.mgmt'),
+        strengths: this.get('review.strengths'),
+        improves: this.get('review.improves'),
+        openresp: this.get('review.openresp')
       };
       this.sendAction('updateReview', review);
     },
