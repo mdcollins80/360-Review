@@ -2,7 +2,15 @@
 
 <p>Fill in the name and business unit of the employee you would like to review.</p>
 
-<form {{action 'createReview' on='submit'}}>
+<select name="newReview.revieweeId" onchange={{action (mut newReview.revieweeId) value='target.value'}} form="new-review-form" class="select" name="email">
+  <option></option>
+  {{#each users as |user|}}
+    <option value={{user.id}}>{{user.email}}</option>
+  {{/each}}
+</select>
+
+
+<form id="new-review-form" {{action 'createReview' on='submit'}}>
   {{input
     placeholder='Reviewee First Name'
     value=newReview.revieweeGivenName

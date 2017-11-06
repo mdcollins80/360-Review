@@ -1,6 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+  revieweeId: DS.attr('number'),
   revieweeGivenName: DS.attr('string'),
   revieweeSurname: DS.attr('string'),
   revieweeBusinessUnit: DS.attr('string'),
