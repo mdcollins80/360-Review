@@ -6,16 +6,15 @@ export default Ember.Route.extend({
 
   actions: {
     submit (credentials) {
-      console.log('credentials: ', credentials)
       this.get('auth').signUp(credentials)
       .then(() => {
         this.get('flashMessages')
-        .success('Successfully created new user!')
+        .success('Successfully created new user!');
       })
       .catch(() => {
         this.get('flashMessages')
-        .danger('There was a problem. Please try again.')
-      })
+        .danger('There was a problem. Please try again.');
+      });
     }
   }
 

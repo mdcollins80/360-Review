@@ -6,6 +6,7 @@ export default Ember.Component.extend({
     updateReview () {
       const review = {
         id: this.get('review.id'),
+        revieweeId: this.get('review.revieweeId'),
         qowp: this.get('review.qowp'),
         prob: this.get('review.prob'),
         imef: this.get('review.imef'),

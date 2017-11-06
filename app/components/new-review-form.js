@@ -9,7 +9,7 @@ export default Ember.Component.extend({
   },
   actions: {
     createReview () {
-      this.set('newReview.revieweeId', parseInt(this.get('newReview.revieweeId')))
+      this.set('newReview.revieweeId', parseInt(this.get('newReview.revieweeId')));
       this.sendAction('createReview', this.get('newReview'));
         // this.set('newReview.revieweeId', null);
         // this.set('newReview.revieweeGivenName', null);
