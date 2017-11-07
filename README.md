@@ -5,7 +5,7 @@ bi-annual review processes.
 
 ## The Application
 
-[Imgur](https://imgur.com/4FouJfj)
+![Imgur](https://i.imgur.com/4FouJfj.png)
 
 [360 REVIEW](https://mdcollins80.github.io/ThreeSixty-Review)
 [GitHub Repository](https://github.com/mdcollins80/ThreeSixty-Review)
