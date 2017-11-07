@@ -1,74 +1,76 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+# The 360 Review Process
 
-# Authentication in Ember
+An Ember based front end we application for interfacing with human resources
+bi-annual review processes.
 
-This training will involve a lot of following code and and exploring the
-Chrome Inspector and utilizing Ember Inspector.  It is recommended that you
-comment code or take notes.
+## The Application
 
-## Prerequisites
+[Imgur](https://i.imgur.com/4FouJfj.png)
 
--   [Ember Resources](https://github.com/ga-wdi-boston/ember-resources)
+[360 REVIEW](https://mdcollins80.github.io/ThreeSixty-Review)
+[GitHub Repository](https://github.com/mdcollins80/ThreeSixty-Review)
 
-## Objectives
 
-By the end of this, developers should be able to:
+The 360 Review process is meant to give supervisors a well rounded view of their
+direct reports.  Each employee is reviewed by their supervisor and any direct
+reports, as well as other employees with whom they work on a regular basis.
 
--   Implement token authentication in an Ember application.
--   Enforce authentication in protected routes.
+The 360 Review web app is meant to facilitate this review process by enabling
+employees to log in to their own account to view their reviews.  Once logged in,
+a user can view the reviews they have to complete, and any reviews they may have
+already submitted.  Users may also create additional reviews if they so choose.
 
-## Preparation
+In future versions, users will be able to request reviews from others, and
+supervisors will be able to see their direct reports' aggregrated results.
+Network wide statistics will also be made available in future releases.
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
-1.  Install dependencies with `npm install` and `bower install`.
-1.  Start any API based on a recent version of the [Rails API
-    Template](https://github.com/ga-wdi-boston/rails-api-template) or the
-    [Express API
-    Template](https://github.com/ga-wdi-boston/express-api-template).
-1.  Start the front-end server with `ember server`.
+## The Back End
 
-## From end to end
+[360 REVIEW API](https://frightening-citadel-39718.herokuapp.com/)
+[GitHub Repository](https://github.com/mdcollins80/ThreeSixty-Review-Api)
 
-Watch as I sign up for a new account on our demo app.
+The back end API was built on Ruby on Rails with a PostGreSQL database.
 
-*Other than the flash messages on the page, did anything change?  What about in
-the Chrome Developer Tools?*
+## Wireframes and User Stories
 
-Take some time and sign in on your own, and check to see if anything in the
-Chrome Dev Tools has changed.
+[Imgur](https://i.imgur.com/DXH2zla.jpg)
 
-Now that we have added a key tool to our personal developer toolkit lets look
-at how it's implemented.
+User Stories:
+- A user can sign up.
+- A user can sign in.
+- A user can change their password when signed in.
+- A user sees a list of reviews to complete.
+- A user can click on review name to navigate to that review.
+- A user can complete a review with input fields.
+- A user can submit partial reviews.
+- A user can include strengths/improvements/open response comments.
+- A user's completed list is populated when a review is saved.
 
-## Follow Along
+## Technology
 
-Let's walk through file by file to see what's happening.  I will ask
-developers to guide me through the files while correcting any misunderstandings.
+This front end was completed using:
+- Ember
+- JavaScript
+- Handlebars
+- HTML
+- CSS
+- Sass
 
-First let's start down the template and component trail, then we'll work our way
-up with actions.
+## Future Release
 
-*Remember: Data down, actions up.*
+I would like to remove the need to enter reviewee names and business units as
+they are already in the system and associated with a review via the Users table.
 
-While going up the Ember hierarchy we may need to stop a some point to discuss
-services.
+I would like to implement the ability for an admin user to import the
+reviews via CSV, removing the need for users to create their own reviews for
+the most part.
 
-## Additional Resources
+I would like to implement statistics for individual users, and for the organization
+as a whole.
 
--   [Implementing Authentication with Ember Services - Ember
-    Igniter](http://emberigniter.com/implementing-authentication-with-ember-services/)
--   [jpadilla/ember-simple-auth-token: Ember Simple Auth extension that is
-    compatible with token-based authentication like
-    JWT.](https://github.com/jpadilla/ember-simple-auth-token)
--   [simplabs/ember-simple-auth: A library for implementing
-    authentication/authorization in Ember.js
-    applications.](https://github.com/simplabs/ember-simple-auth)
--   [Create your first Ember 2.0 app: From authentication to calling an
-    API](https://auth0.com/blog/2015/08/11/create-your-first-ember-2-dot-0-app-from-authentication-to-calling-an-api/)
+I would like to give users the ability to request reviews from other users as
+this is an important part of the review process.
 
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+I would like to give supervisors the ability to see their direct reports reviewers
+and edit those lists as they see fit, and ultimately see the summary statistics
+resulting from those submitted reviews.
