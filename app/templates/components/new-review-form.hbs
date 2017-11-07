@@ -1,6 +1,6 @@
 <h5>Instructions:</h5>
 
-<p>Fill in the name and business unit of the employee you would like to review.</p>
+<p>Select the name of the employee you would like to review.</p>
 
 <select onchange={{action (mut newReview.revieweeId) value='target.value'}} form="new-review-form" class="select">
   <option></option>
@@ -11,7 +11,7 @@
 
 
 <form id="new-review-form" {{action 'createReview' on='submit'}}>
-  {{!-- {{input
+  {{input
     placeholder='Reviewee First Name'
     value=newReview.revieweeGivenName
   }}
@@ -22,6 +22,6 @@
   {{input
     placeholder='Reviewee Business Unit'
     value=newReview.revieweeBusinessUnit
-  }} --}}
+  }}
   <button class='btn btn-success' type='submit'>Create</button>
 </form>

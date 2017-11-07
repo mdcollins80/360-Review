@@ -17,5 +17,6 @@ export default DS.Model.extend({
   strengths: DS.attr('string'),
   improves: DS.attr('string'),
   openresp: DS.attr('string'),
-  wasSaved: DS.attr('boolean')
+  wasSaved: DS.attr('boolean'),
+  // reviewee: DS.belongsTo('user')
 });
