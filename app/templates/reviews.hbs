@@ -1,9 +1,19 @@
-<h3>Reviews to Complete</h3>
-
-<ul>
-  {{#each model as |review|}}
-    <li>{{#link-to "review" review}}{{review.revieweeGivenName}}{{/link-to}}</li>
-  {{/each}}
-</ul>
-
 <h3>{{#link-to "review-new"}}Create a new Review{{/link-to}}</h3>
+
+<h3>Assigned Reviews</h3>
+  <ul>
+    {{#each model as |review|}}
+      {{#unless review.wasSaved}}
+      <li>{{#link-to "review" review}}{{review.revieweeSurname}}, {{review.revieweeGivenName}}{{/link-to}}</li>
+      {{/unless}}
+    {{/each}}
+  </ul>
+
+<h3>Completed Reviews</h3>
+  <ul>
+    {{#each model as |review|}}
+      {{#if review.wasSaved}}
+        <li>{{#link-to "review" review}}{{review.revieweeSurname}}, {{review.revieweeGivenName}}{{/link-to}}</li>
+      {{/if}}
+    {{/each}}
+  </ul>

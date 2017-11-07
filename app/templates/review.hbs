@@ -1,15 +1,9 @@
 <h4>360 Review Form</h4>
 
-<table>
-  <tr>
-    <td>Employee:</td>
-    <td>{{model.revieweeGivenName}} {{model.revieweeSurname}}</td>
-  </tr>
-  <tr>
-    <td>Business Unit:</td>
-    <td>{{model.revieweeBusinessUnit}}</td>
-  </tr>
-</table>
+<h5>Employee</h5>
+{{model.revieweeGivenName}} {{model.revieweeSurname}}
+<h5>Business Unit</h5>
+{{model.revieweeBusinessUnit}}
 
 {{review-update
   review=model

@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model () {
-    return this.get('store').findAll('review');
+    return this.get('store').findAll('review')
+      .then(reviews => reviews.sortBy('revieweeSurname'));
   }
 });

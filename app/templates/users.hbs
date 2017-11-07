@@ -1,7 +1,10 @@
 <h2>Users</h2>
 
+<h3>{{#link-to 'user-new'}}Create New User{{/link-to}}</h3>
+
+<h3>Edit Users</h3>
 <ul>
 {{#each model as |user|}}
-  <li>{{user.email}}</li>
+  <li>{{#link-to 'user' user}}{{user.email}}{{/link-to}}</li>
 {{/each}}
 </ul>

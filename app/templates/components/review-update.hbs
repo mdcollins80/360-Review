@@ -1,51 +1,54 @@
 <br>
 
 <form {{action 'updateReview' on='submit' review=review }}>
-  Quality of Work Product: {{input
-    placeholder='Quality of Work Product'
-    value=review.qowp
-  }}
+  <label>Quality of Work Product</label>
+  {{input placeholder='Quality of Work Product'
+          value=review.qowp}}
 
-  Problem Solving:
-  {{input
-    placeholder='Problem Solving'
-    value=review.prob
-  }}
-  Implementation Effectiveness:
-  {{input
-    placeholder='Implementation Effectiveness'
-    value=review.imef
-  }}
-  Openness to Feedback:
-  {{input
-    placeholder='Openness to Feedback'
-    value=review.opfb
-  }}
-  Teamwork:
-  {{input
-    placeholder='Teamwork'
-    value=review.team
-  }}
-  Communication:
-  {{input
-    placeholder='Communication'
-    value=review.comm
-  }}
-  Effort & Commitment:
-  {{input
-    placeholder='Effort & Commitment'
-    value=review.efco
-  }}
-  Reliability
-  {{input
-    placeholder='Reliability'
-    value=review.reli
-  }}
-  Management
-  {{input
-    placeholder='Management'
-    value=review.mgmt
-  }}
+  <label>Problem Solving</label>
+  {{input placeholder='Problem Solving'
+          value=review.prob}}
+
+  <label>Implementation Effectiveness</label>
+  {{input placeholder='Implementation Effectiveness'
+          value=review.imef}}
+
+  <label>Openness to Feedback</label>
+  {{input placeholder='Openness to Feedback'
+          value=review.opfb}}
+
+  <label>Teamwork</label>
+  {{input placeholder='Teamwork'
+          value=review.team}}
+
+  <label>Communication</label>
+  {{input placeholder='Communication'
+          value=review.comm}}
+
+  <label>Effort & Commitment</label>
+  {{input placeholder='Effort & Commitment'
+          value=review.efco}}
+
+  <label>Reliability</label>
+  {{input placeholder='Reliability'
+          value=review.reli}}
+
+  <label>Management</label>
+  {{input placeholder='Management'
+          value=review.mgmt}}
+
+  <label>Strengths</label>
+  {{input placeholder='Strengths'
+          value=review.strengths}}
+
+  <label>Improvements</label>
+  {{input placeholder='Improvements'
+          value=review.improves}}
+
+  <label>Open Response</label>
+  {{input placeholder='Open Response'
+          value=review.openresp}}
+
   <button class='btn btn-primary' type='submit'>Save</button>
-  <button class='btn btn-danger' {{action 'deleteReview' review}}>Delete</button>
+  <button class='btn btn-danger pull-right' {{action 'deleteReview' review}}>Delete</button>
 </form>

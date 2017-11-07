@@ -1,6 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+  revieweeId: DS.attr('number'),
   revieweeGivenName: DS.attr('string'),
   revieweeSurname: DS.attr('string'),
   revieweeBusinessUnit: DS.attr('string'),
@@ -15,5 +16,7 @@ export default DS.Model.extend({
   mgmt: DS.attr('number'),
   strengths: DS.attr('string'),
   improves: DS.attr('string'),
-  openresp: DS.attr('string')
+  openresp: DS.attr('string'),
+  wasSaved: DS.attr('boolean'),
+  // reviewee: DS.belongsTo('user')
 });
