@@ -7,7 +7,6 @@ export default Ember.Route.extend({
   },
   actions: {
     createReview (review) {
-      console.log('review is: ', review);
       let newReview = this.get('store').createRecord('review', review);
       newReview.save()
         .then(() => this.transitionTo('reviews'));
