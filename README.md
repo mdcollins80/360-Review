@@ -33,7 +33,7 @@ The back end API was built on Ruby on Rails with a PostGreSQL database.
 
 ## Wireframes and User Stories
 
-[Imgur](https://i.imgur.com/DXH2zla.jpg)
+![Imgur](https://i.imgur.com/DXH2zla.jpg)
 
 User Stories:
 - A user can sign up.
